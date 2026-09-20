@@ -1,11 +1,11 @@
 if syn and syn.write_clipboard then
-    syn.write_clipboard("https://discord.gg/AwpVGTpcUH")
+    syn.write_clipboard("https://discord.gg/nxt1")
 elseif setclipboard then
-    setclipboard("https://discord.gg/AwpVGTpcUH")
+    setclipboard("https://discord.gg/nxt1")
 else
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "رابط الديسكورد",
-        Text = "https://discord.gg/AwpVGTpcUH",
+        Text = "https://discord.gg/nxt1",
         Duration = 10
     })
 end
