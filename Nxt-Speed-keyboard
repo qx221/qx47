@@ -48,7 +48,7 @@ DiscordLabel.BackgroundTransparency = 1
 DiscordLabel.Position = UDim2.new(0, 0, 0.53, 0)
 DiscordLabel.Size = UDim2.new(1, 0, 0, 30)
 DiscordLabel.Font = Enum.Font.Gotham
-DiscordLabel.Text = "https://discord.gg/AwpVGTpcUH"
+DiscordLabel.Text = "https://discord.gg/nxt1"
 DiscordLabel.TextColor3 = Color3.new(0.5, 0.7, 1)
 DiscordLabel.TextSize = 18
 DiscordLabel.TextScaled = true
@@ -70,11 +70,11 @@ CopyButton.ZIndex = 2
 UICorner.Parent = CopyButton
 UICorner.CornerRadius = UDim.new(0, 12)
 
-setclipboard("https://discord.gg/AwpVGTpcUH")
+setclipboard("https://discord.gg/nxt1")
 
 
 CopyButton.MouseButton1Click:Connect(function()
-    setclipboard("https://discord.gg/AwpVGTpcUH")
+    setclipboard("https://discord.gg/nxt1")
     CopyButton.Text = "تم النسخ ✓"
     wait(1.5)
     CopyButton.Text = "نسخ رابط الديسكورد"
