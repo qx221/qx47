@@ -1,1 +1,91 @@
-loadstring(game:HttpGet("https://flowauth.net/v1/loaders/luauEngine.lua"))()
+if syn and syn.write_clipboard then
+    syn.write_clipboard("https://discord.gg/zQVWQR3fNM")
+elseif setclipboard then
+    setclipboard("https://discord.gg/zQVWQR3fNM")
+else
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Discord Link | رابط الديسكورد",
+        Text = "https://discord.gg/zQVWQR3fNM",
+        Duration = 10
+    })
+end
+
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "BlackScreen"
+screenGui.ResetOnSpawn = false
+screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+screenGui.DisplayOrder = 999999
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = playerGui
+
+local blackFrame = Instance.new("Frame")
+blackFrame.Name = "BlackFrame"
+blackFrame.Size = UDim2.new(1, 0, 1, 0)
+blackFrame.Position = UDim2.new(0, 0, 0, 0)
+blackFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+blackFrame.BorderSizePixel = 0
+blackFrame.Active = true
+blackFrame.Draggable = false
+blackFrame.ZIndex = 999999
+blackFrame.Parent = screenGui
+
+local mainText = Instance.new("TextLabel")
+mainText.Name = "MainText"
+mainText.Size = UDim2.new(1, -40, 0.3, 0)
+mainText.Position = UDim2.new(0, 20, 0.1, 0)
+mainText.BackgroundTransparency = 1
+mainText.TextColor3 = Color3.new(1, 1, 1)
+mainText.TextScaled = true
+mainText.Font = Enum.Font.GothamBold
+mainText.ZIndex = 999999
+mainText.Parent = blackFrame
+mainText.Text = "The script is in the Discord server | السكربت في سيرفر الديسكورد"
+
+local linkText = Instance.new("TextLabel")
+linkText.Name = "LinkText"
+linkText.Size = UDim2.new(1, -40, 0.15, 0)
+linkText.Position = UDim2.new(0, 20, 0.5, 0)
+linkText.BackgroundTransparency = 1
+linkText.TextColor3 = Color3.new(1, 1, 1)
+linkText.TextScaled = true
+linkText.Font = Enum.Font.GothamBold
+linkText.ZIndex = 999999
+linkText.Parent = blackFrame
+linkText.Text = "Server link copied | تم نسخ رابط السيرفر"
+
+local linkLabel = Instance.new("TextLabel")
+linkLabel.Name = "LinkLabel"
+linkLabel.Size = UDim2.new(1, -40, 0.08, 0)
+linkLabel.Position = UDim2.new(0, 20, 0.68, 0)
+linkLabel.BackgroundTransparency = 1
+linkLabel.TextColor3 = Color3.fromRGB(88, 101, 242)
+linkLabel.TextScaled = true
+linkLabel.Font = Enum.Font.GothamBold
+linkLabel.ZIndex = 999999
+linkLabel.Parent = blackFrame
+linkLabel.Text = "https://discord.gg/zQVWQR3fNM"
+
+local countdownText = Instance.new("TextLabel")
+countdownText.Name = "CountdownText"
+countdownText.Size = UDim2.new(1, 0, 0.1, 0)
+countdownText.Position = UDim2.new(0, 0, 0.85, 0)
+countdownText.BackgroundTransparency = 1
+countdownText.TextColor3 = Color3.new(1, 1, 1)
+countdownText.TextScaled = true
+countdownText.Font = Enum.Font.GothamBold
+countdownText.ZIndex = 999999
+countdownText.Parent = blackFrame
+countdownText.Text = "Black screen disappears in 10s | الشاشة السوداء تختفي بعد 10 ثواني"
+
+local function startCountdown()
+    for i = 10, 1, -1 do
+        countdownText.Text = "Black screen disappears in " .. tostring(i) .. "s | الشاشة السوداء تختفي بعد " .. tostring(i) .. " ثواني"
+        wait(1)
+    end
+    screenGui:Destroy()
+end
+
+startCountdown()
