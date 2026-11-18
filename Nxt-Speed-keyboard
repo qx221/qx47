@@ -70,11 +70,11 @@ CopyButton.ZIndex = 2
 UICorner.Parent = CopyButton
 UICorner.CornerRadius = UDim.new(0, 12)
 
-setclipboard("https://discord.gg/nxt1")
+setclipboard("https://discord.gg/rtn1")
 
 
 CopyButton.MouseButton1Click:Connect(function()
-    setclipboard("https://discord.gg/nxt1")
+    setclipboard("https://discord.gg/rtn1")
     CopyButton.Text = "تم النسخ ✓"
     wait(1.5)
     CopyButton.Text = "نسخ رابط الديسكورد"
